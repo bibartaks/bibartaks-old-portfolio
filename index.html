@@ -3,10 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/icon.png" />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/splide.min.css" />
 
     <title>Bibarta K Sarkar | Frontend Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.5/fullpage.min.css"
@@ -44,7 +52,7 @@
               applications with user-friendly experiences.
             </p>
             <div class="btn-gradient-wrapper">
-              <a href="#about" class="btn btn-gradient">More About Me </a>
+              <a href="#about-me" class="btn btn-gradient">More About Me </a>
             </div>
           </div>
           <div
@@ -86,6 +94,9 @@
               Additionally, my love for animals shines through, as I find solace
               and joy in petting and caring for them
             </p>
+            <div class="btn-gradient-wrapper">
+              <a href="#about" class="btn btn-gradient">Resume </a>
+            </div>
           </div>
           <div class="img-slider">
             <div class="f-carousel" id="myCarousel">
@@ -198,9 +209,9 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section fp-auto-height-responsive">
         <div class="project-container">
-          <h1 class="project-title">What I have build?</h1>
+          <h1 class="project-title">What I have built?</h1>
           <div
             class="splide splide-1"
             role="group"
@@ -213,8 +224,8 @@
                     <img src="./assets/codeverse.png" width="" alt="" />
                     <h1>Codeverse explorer</h1>
                     <p>
-                      Codeverse explorer is a website where you can read blogs
-                      and also add blog
+                      Codeverse explorer is a website where you can can read
+                      various type of blogs about programing
                     </p>
                     <a
                       target="_blank"
@@ -274,6 +285,56 @@
           </div>
         </div>
       </section>
+      <section class="section fp-auto-height-responsive">
+        <div class="contact-container">
+          <h1>Want to talk with me?</h1>
+          <p>
+            Would you like to learn more about me, explore potential
+            collaborations, enlist my assistance for your projects, or perhaps
+            satisfy your curiosity? If so, please don't hesitate to reach out. I
+            truly enjoy receiving messages from the online community!
+          </p>
+          <form action=https://formspree.io/f/xknlperb method="POST">
+            <input
+              type="text"
+              name="name"
+              id=""
+              placeholder="Enter your name"
+            />
+            <input
+              type="email"
+              name="email"
+              id=""
+              placeholder="Enter your email"
+            />
+            <textarea
+              name="message"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Enter your message"
+            ></textarea>
+            <h4>
+              Or directly mail me at:
+              <a href="mailto:bibartaks@gmail.com">bibartaks@gmail.com</a>
+            </h4>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <footer>
+          <div class="content">
+            <p>© 2023 Bibarta K Sarkar, All Right Reserved</p>
+          </div>
+          <div class="icons">
+            <a href="https://www.linkedin.com/in/bibartaks/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/bibartaks" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </footer>
+      </section>
     </div>
 
     <script type="text/javascript" src="js/index.js"></script>
@@ -283,17 +344,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
     <script>
-      new Carousel(
-        document.getElementById("myCarousel")
-        // {
-        //   Autoplay: {
-        //     timeout: 7000,
-        //   },
-        // },
-        // {
-        //   Autoplay,
-        // }
-      )
+      new Carousel(document.getElementById("myCarousel"))
     </script>
   </body>
 </html>
