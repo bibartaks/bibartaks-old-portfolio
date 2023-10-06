@@ -20,8 +20,14 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 400px;
-  grid-gap: 5rem;
+  grid-gap: 2rem;
   color: white;
+}
+@media only screen and (max-width: 800px) {
+  .landing-container {
+    grid-template-columns: 1fr;
+    padding: 5rem 0;
+  }
 }
 .landing-container .landing-about h1 {
   font-size: 3rem;
@@ -41,12 +47,27 @@ body {
   margin-bottom: 1rem;
   color: #b3b3b3;
 }
+@media only screen and (max-width: 800px) {
+  .landing-container .landing-about p {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .landing-container .landing-about p {
+    text-align: left;
+  }
+}
 .landing-container .landing-about .btn-gradient-wrapper {
   background: linear-gradient(to left, #ffc600, #e8482e, #9c209d);
   display: inline-block;
   padding: 1px 1px;
   border-radius: 980px;
   transition: 0.3s all linear;
+}
+@media only screen and (max-width: 800px) {
+  .landing-container .landing-about .btn-gradient-wrapper {
+    margin-bottom: 2rem;
+  }
 }
 .landing-container .landing-about .btn-gradient-wrapper .btn {
   display: block;
@@ -72,4 +93,73 @@ body {
 }
 .landing-container .landing-image img:hover {
   filter: contrast(1.2);
+}
+@media only screen and (max-width: 800px) {
+  .landing-container .landing-image img {
+    width: 250px;
+  }
+}
+
+.about-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-gap: 2rem;
+}
+@media only screen and (max-width: 1000px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    padding: 5rem 0;
+  }
+}
+.about-container .about-content h1 {
+  font-size: 3rem;
+  background-image: linear-gradient(180deg, #ffe993, #eb831c);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+.about-container .about-content p {
+  text-align: justify;
+  line-height: 200%;
+  max-width: 1000px;
+  color: #b3b3b3;
+}
+@media only screen and (max-width: 800px) {
+  .about-container .about-content p {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about-container .about-content p {
+    text-align: left;
+  }
+}
+.about-container .img-slider {
+  width: 390px;
+  text-align: center;
+}
+@media only screen and (max-width: 1000px) {
+  .about-container .img-slider {
+    display: none;
+  }
+}
+
+#myCarousel {
+  --f-carousel-spacing: 20px;
+  --f-carousel-slide-width: 100%;
+  --f-progress-color: white;
+}
+
+#myCarousel .f-carousel__slide {
+  padding: 10px;
+  border: 1px solid #eb831c;
+}
+
+.f-carousel__dots li button {
+  color: white !important;
 }/*# sourceMappingURL=index.css.map */
