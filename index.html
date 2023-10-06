@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/splide.min.css" />
+
     <title>Bibarta K Sarkar | Frontend Developer</title>
     <link
       rel="stylesheet"
@@ -28,9 +30,8 @@
     />
   </head>
   <body>
-
     <div id="fullpage">
-      <section class="section fp-auto-height-responsive">
+      <section class="section fp-auto-height-responsive" id="landing">
         <div class="landing-container">
           <div class="landing-about">
             <h1>Bibarta K Sarkar</h1>
@@ -124,11 +125,11 @@
               </div>
               <div class="skill-item">
                 <img src="./assets/JavaScript.svg" alt="" />
-                <p>javascript</p>
+                <p>JS</p>
               </div>
               <div class="skill-item">
                 <img src="./assets/TypeScript.svg" alt="" />
-                <p>Typescript</p>
+                <p>TS</p>
               </div>
               <div class="skill-item">
                 <img src="./assets/React-Light.svg" alt="" />
@@ -171,6 +172,7 @@
                 <p>Vercel</p>
               </div>
             </div>
+
             <div class="tech-cube">
               <div class="cube">
                 <div class="front">
@@ -190,19 +192,93 @@
                 </div>
                 <div class="right">
                   <img src="./assets/TypeScript.svg" alt="" />
-
                 </div>
               </div>
             </div>
           </div>
-    
+        </div>
+      </section>
+      <section class="section">
+        <div class="project-container">
+          <h1 class="project-title">What I have build?</h1>
+          <div
+            class="splide splide-1"
+            role="group"
+            aria-label="Splide Basic HTML Example"
+          >
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide project-slide">
+                  <div class="card-content">
+                    <img src="./assets/codeverse.png" width="" alt="" />
+                    <h1>Codeverse explorer</h1>
+                    <p>
+                      Codeverse explorer is a website where you can read blogs
+                      and also add blog
+                    </p>
+                    <a
+                      target="_blank"
+                      href="https://codeverse-explorer.vercel.app/"
+                      >See live</a
+                    >
+                  </div>
+                </li>
+                <li class="splide__slide project-slide">
+                  <div class="card-content">
+                    <img src="./assets/coinify.png" width="" alt="" />
+                    <h1>Coinify</h1>
+                    <p>
+                      Conify is a website where you can see realtime crypto data
+                      trending coins and many more!
+                    </p>
+                    <a
+                      target="_blank"
+                      href="https://coinify-bibartaks.vercel.app/"
+                      >See live</a
+                    >
+                  </div>
+                </li>
+                <li class="splide__slide project-slide">
+                  <div class="card-content">
+                    <img src="./assets/shopxpress.png" width="" alt="" />
+                    <h1>ShopXPress</h1>
+                    <p>
+                      Shopxpress is a website where you find products and add in
+                      your cart also you can filter your products
+                    </p>
+                    <a
+                      target="_blank"
+                      href="https://shopxpress-bibartaks.vercel.app/"
+                      >See live</a
+                    >
+                  </div>
+                </li>
+                <li class="splide__slide project-slide">
+                  <div class="card-content">
+                    <img src="./assets/github-finder.png" width="" alt="" />
+                    <h1>Github Finder</h1>
+                    <p>
+                      Github Finder is a project whree you can find any github
+                      user by searching his/her name
+                    </p>
+                    <a
+                      href="https://bibartaks-github-finder.netlify.app/"
+                      target="_blank"
+                      >See live</a
+                    >
+                  </div>
+                </li>
+                <!-- <li class="splide__slide">Slide 03</li> -->
+              </ul>
+            </div>
           </div>
         </div>
       </section>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script src="./js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
