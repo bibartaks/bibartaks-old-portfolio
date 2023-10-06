@@ -15,6 +15,93 @@ body {
   line-height: 1;
 }
 
+// Navbar Links
+.navbar-links {
+  display: none;
+  position: fixed;
+  background-color: rgba(249, 243, 237, 0.7);
+  backdrop-filter: blur(10px);
+  height: 100vh;
+  width: 670px;
+  right: 0;
+  z-index: 999;
+  color: black;
+
+  @media only screen and (max-width: 600px) {
+    width: 100vw;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 100vw;
+  }
+
+  @media (orientation: landscape) and (max-width: 1000px) {
+    width: 100vw;
+  }
+
+  .close-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding: 20px;
+    transition: 0.5s all linear;
+    cursor: pointer;
+  }
+
+  .navbar-link-container {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @media (orientation: landscape) and (max-width: 1000px) {
+      margin-top: 0;
+    }
+
+    .nav__links:nth-child(1) {
+      animation: sclaePopUp 1s ease-in forwards 1s;
+    }
+
+    .nav__links:nth-child(2) {
+      animation: sclaePopUp 0.6s ease-in forwards 1.3s;
+    }
+
+    .nav__links:nth-child(3) {
+      animation: sclaePopUp 0.6s ease-in forwards 1.6s;
+    }
+
+    .nav__links:nth-child(4) {
+      animation: sclaePopUp 0.6s ease-in forwards 1.9s;
+    }
+
+    a {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 0.7em;
+      text-decoration: none;
+      color: black;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 3rem;
+      }
+
+      @media (orientation: landscape) and (max-width: 1000px) {
+        font-size: 2rem;
+      }
+    }
+
+    .links {
+      transition: 0.1s all linear;
+      &:hover {
+        font-weight: lighter;
+      }
+    }
+  }
+}
+
 // Landing
 .landing-container {
   width: 90%;
@@ -117,6 +204,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 400px;
   grid-gap: 2rem;
+  align-items: center;
+  justify-content: center;
 
   @media only screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
@@ -130,7 +219,7 @@ body {
       color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     p {
@@ -159,17 +248,210 @@ body {
   }
 }
 
-#myCarousel {
-  --f-carousel-spacing: 20px;
-  --f-carousel-slide-width: 100%;
-  --f-progress-color: white;
+// Skills Section
+.skill-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+
+  .skill-content-container {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    grid-gap: 2rem;
+
+    @media only screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .skill-title {
+    font-size: 3rem;
+    background-image: linear-gradient(180deg, #ffe993, #eb831c);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 3rem;
+  }
+
+  .skill-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media only screen and (max-width: 1350px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 800px) {
+      margin-bottom: 3rem;
+    }
+
+    grid-row-gap: 2rem;
+    grid-column-gap: 5rem;
+    padding: 1rem;
+    .skill-item {
+      color: white;
+      img {
+        height: 72px;
+        margin-bottom: 0.4rem;
+      }
+
+      p {
+        // width: 50px;
+        text-align: center;
+      }
+    }
+  }
 }
 
-#myCarousel .f-carousel__slide {
+// Tech cube
+.tech-cube {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  object-fit: scale-down;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+
+  @media only screen and (max-width: 800px) {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-cube {
+    margin-top: 10vh;
+  }
+}
+
+.cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+
+.cube > div {
+  position: absolute;
+  box-sizing: border-box;
   padding: 10px;
-  border: 1px solid #eb831c;
+  height: 100%;
+  width: 100%;
+  border: solid 3px #f6416c;
+  background-color: rgba(249, 243, 237, 0.7);
 }
 
-.f-carousel__dots li button {
-  color: white !important;
+.front {
+  transform: translateZ(100px);
+  display: flex;
+  align-items: center;
+}
+
+.front > img {
+  width: 150px;
+}
+.left > img {
+  height: 70% !important;
+}
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+  display: flex;
+  align-items: center;
+}
+
+.back > img {
+  width: 150px;
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.right > img {
+  width: 150px;
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+  display: flex;
+  align-items: center;
+}
+
+.left > img {
+  width: 150px;
+}
+
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+  display: flex;
+  align-items: center;
+}
+
+.top > img {
+  width: 150px;
+}
+
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+  display: flex;
+  align-items: center;
+}
+
+.bottom > img {
+  width: 150px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube {
+  animation: rotate 10s infinite linear;
+}
+
+/* adding hover effect */
+.tech-cube:hover .front {
+  transform: translateZ(200px);
+}
+
+.tech-cube:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+
+.tech-cube:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.tech-cube:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.tech-cube:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.tech-cube:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+.cube > div {
+  transition: transform 0.2s ease-in;
 }

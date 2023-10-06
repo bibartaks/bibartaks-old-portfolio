@@ -19,16 +19,16 @@
       referrerpolicy="no-referrer"
     ></script>
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
     />
-<link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css"
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css"
     />
-
   </head>
   <body>
+
     <div id="fullpage">
       <section class="section fp-auto-height-responsive">
         <div class="landing-container">
@@ -58,7 +58,7 @@
           </div>
         </div>
       </section>
-      <div class="section fp-auto-height-responsive">
+      <section class="section fp-auto-height-responsive">
         <div class="about-container">
           <div class="about-content">
             <h1>About Me</h1>
@@ -88,36 +88,136 @@
           </div>
           <div class="img-slider">
             <div class="f-carousel" id="myCarousel">
-                <div class="f-carousel__slide">
-                    <img src="./assets/childhood_pic_with_tablet.png" width="300px" alt="">
+              <div class="f-carousel__slide">
+                <img
+                  src="./assets/childhood_pic_with_tablet.png"
+                  width="300px"
+                  alt=""
+                />
+              </div>
+              <div class="f-carousel__slide">
+                <img src="./assets/me_with_tom.png" width="300px" alt="" />
+              </div>
+              <div class="f-carousel__slide">
+                <img src="./assets/cricket_team.png" width="300px" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section fp-auto-height-responsive">
+        <div class="skill-container">
+          <h1 class="skill-title">What I use?</h1>
+          <div class="skill-content-container">
+            <div class="skill-items">
+              <div class="skill-item">
+                <img src="./assets/HTML.svg" alt="" />
+                <p>HTML</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/CSS.svg" alt="" />
+                <p>CSS</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/Sass.svg" alt="" />
+                <p>Sass</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/JavaScript.svg" alt="" />
+                <p>javascript</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/TypeScript.svg" alt="" />
+                <p>Typescript</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/React-Light.svg" alt="" />
+                <p>React</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/NextJS-Light.svg" alt="" />
+                <p>Next.js</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/TailwindCSS-Light.svg" alt="" />
+                <p>Tailwind</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/MaterialUI-Light.svg" alt="" />
+                <p>MUI</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/Git.svg" alt="" />
+                <p>Git</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/Github-Light.svg" alt="" />
+                <p>Github</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/Firebase-Light.svg" alt="" />
+                <p>Firebase</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/Figma-Light.svg" alt="" />
+                <p>Figma</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/canva_icon.png" alt="" />
+                <p>Canva</p>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/Vercel-Light.svg" alt="" />
+                <p>Vercel</p>
+              </div>
+            </div>
+            <div class="tech-cube">
+              <div class="cube">
+                <div class="front">
+                  <img src="./assets/React-Light.svg" alt="" />
                 </div>
-                <div class="f-carousel__slide">
-                    <img src="./assets/me_with_tom.png" width="300px" alt="">
+                <div class="back">
+                  <img src="./assets/NextJS-Light.svg" alt="" />
                 </div>
-                <div class="f-carousel__slide">
-                    <img src="./assets/cricket_team.png" width="300px" alt="">
+                <div class="top">
+                  <img src="./assets/TailwindCSS-Light.svg" alt="" />
+                </div>
+                <div class="bottom">
+                  <img src="./assets/MaterialUI-Light.svg" alt="" />
+                </div>
+                <div class="left">
+                  <img src="./assets/Firebase-Light.svg" alt="" />
+                </div>
+                <div class="right">
+                  <img src="./assets/TypeScript.svg" alt="" />
 
                 </div>
               </div>
             </div>
           </div>
+    
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
     <script>
-        new Carousel(document.getElementById("myCarousel"), {
-          Autoplay : {
-            timeout : 7000
-          }
-        }, {
-          Autoplay
-        });
-      </script>
+      new Carousel(
+        document.getElementById("myCarousel")
+        // {
+        //   Autoplay: {
+        //     timeout: 7000,
+        //   },
+        // },
+        // {
+        //   Autoplay,
+        // }
+      )
+    </script>
   </body>
 </html>
