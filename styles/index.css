@@ -111,11 +111,7 @@ body {
      object-fit: cover;
   background: #b3b3b3;
   border: 2px solid #ffc600;
-  transition: 0.5s filter linear;
-  filter: saturate(1.2);
-}
-.landing-container .landing-image img:hover {
-  filter: contrast(1.2);
+  filter: saturate(1.1);
 }
 @media only screen and (max-width: 800px) {
   .landing-container .landing-image img {
