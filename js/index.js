@@ -30,5 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
     autoplay: true,
     perMove: 1,
     perPage: 2,
+    breakpoints: {
+      800: { perPage: 1, gap: "1rem" },
+      640: { gap: 0 },
+    },
   }).mount()
 })

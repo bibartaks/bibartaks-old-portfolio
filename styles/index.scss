@@ -47,6 +47,9 @@ body {
 #header {
   background: linear-gradient(125.6deg, #121212 63.9%, #df4f1b 30%);
   min-height: 100vh;
+  @media only screen and (max-width: 800px) {
+    min-height: auto;
+  }
 }
 // Landing
 .landing-container {
@@ -83,7 +86,7 @@ body {
     }
 
     h2 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     p {
@@ -110,6 +113,7 @@ body {
       background: #b3b3b3;
       border: 2px solid #ffc600;
       transition: 0.5s filter linear;
+      filter: saturate(1.2);
 
       &:hover {
         filter: contrast(1.2);
@@ -129,7 +133,7 @@ body {
 // About Section
 .about-container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   color: white;
   display: grid;
@@ -137,7 +141,7 @@ body {
   grid-gap: 2rem;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0;
+  // padding: 5rem 0;
 
   @media only screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
@@ -196,7 +200,7 @@ body {
   width: 90%;
   max-width: 1300px;
   margin: auto;
-  padding: 5rem 0;
+  // padding: 5rem 0;
 
   @media only screen and (max-width: 500px) {
     padding-bottom: 3rem;
@@ -313,7 +317,7 @@ body {
   padding: 10px;
   height: 100%;
   width: 100%;
-  border: solid 3px #f6416c;
+  border: solid 3px #eb831c;
   background-color: rgba(249, 243, 237, 0.7);
 }
 
@@ -506,6 +510,11 @@ body {
   color: white;
   padding: 5rem 2rem;
 
+  .contact-mail {
+    font-size: 0.7rem;
+    color: #b3b3b3;
+  }
+
   @media only screen and (max-width: 800px) {
     padding: 5rem 2rem;
   }
@@ -530,6 +539,7 @@ body {
   p {
     line-height: 200%;
     margin-bottom: 5rem;
+    color: #b3b3b3;
   }
 
   form {
@@ -553,14 +563,19 @@ body {
     }
 
     textarea {
+      display: flex;
+      align-self: flex-start;
+      justify-self: start;
       background-color: #181818;
       color: lightgray;
-
+      height: 200px;
       width: 100%;
       padding: 0.5rem 1rem;
       font-family: inherit;
       margin-bottom: 2rem;
       border: 1px dashed gray;
+      resize: vertical; /* Prevent horizontal resizing */
+
       &::placeholder {
         color: lightgray; // Replace #999 with the desired color code or name
       }
@@ -591,40 +606,6 @@ body {
       }
     }
   }
-
-  // form {
-  //   width: 100%;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   justify-content: center;
-
-  // input {
-  //   width: 100%;
-  //   padding: 0.5rem 1rem;
-  //   font-family: inherit;
-  //   margin-bottom: 1rem;
-  // }
-
-  // textarea {
-  //   width: 100%;
-  //   padding: 0.5rem 1rem;
-  //   font-family: inherit;
-  //   margin-bottom: 1rem;
-  // }
-
-  // button {
-  //   display: inline-block;
-  //   text-align: left;
-  //   margin-left: 0;
-  //   font-family: inherit;
-  //   padding: 0.2rem 1rem;
-  //   background-color: #eb831c;
-  //   border: none;
-
-  //   cursor: pointer;
-  // }
-  // }
 }
 
 footer {
@@ -632,7 +613,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   color: white;
-  // padding: 0;
   margin: 0;
   border-top: 1px solid #b3b3b3;
   padding: 1rem 2rem;
@@ -643,13 +623,14 @@ footer {
       p {
         font-size: 0.9rem;
         margin-bottom: 1rem;
+        color: #b3b3b3;
       }
     }
   }
 
   a {
     text-decoration: none;
-    color: white;
+    color: #b3b3b3;
   }
 
   i {

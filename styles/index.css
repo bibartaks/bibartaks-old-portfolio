@@ -45,6 +45,11 @@ body {
   background: linear-gradient(125.6deg, #121212 63.9%, #df4f1b 30%);
   min-height: 100vh;
 }
+@media only screen and (max-width: 800px) {
+  #header {
+    min-height: auto;
+  }
+}
 
 .landing-container {
   width: 90%;
@@ -81,7 +86,7 @@ body {
   }
 }
 .landing-container .landing-about h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .landing-container .landing-about p {
   line-height: 200%;
@@ -107,6 +112,7 @@ body {
   background: #b3b3b3;
   border: 2px solid #ffc600;
   transition: 0.5s filter linear;
+  filter: saturate(1.2);
 }
 .landing-container .landing-image img:hover {
   filter: contrast(1.2);
@@ -123,7 +129,7 @@ body {
 
 .about-container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   color: white;
   display: grid;
@@ -131,7 +137,6 @@ body {
   grid-gap: 2rem;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0;
 }
 @media only screen and (max-width: 1000px) {
   .about-container {
@@ -190,7 +195,6 @@ body {
   width: 90%;
   max-width: 1300px;
   margin: auto;
-  padding: 5rem 0;
 }
 @media only screen and (max-width: 500px) {
   .skill-container {
@@ -306,7 +310,7 @@ body {
   padding: 10px;
   height: 100%;
   width: 100%;
-  border: solid 3px #f6416c;
+  border: solid 3px #eb831c;
   background-color: rgba(249, 243, 237, 0.7);
 }
 
@@ -487,6 +491,10 @@ body {
   color: white;
   padding: 5rem 2rem;
 }
+.contact-container .contact-mail {
+  font-size: 0.7rem;
+  color: #b3b3b3;
+}
 @media only screen and (max-width: 800px) {
   .contact-container {
     padding: 5rem 2rem;
@@ -513,6 +521,7 @@ body {
 .contact-container p {
   line-height: 200%;
   margin-bottom: 5rem;
+  color: #b3b3b3;
 }
 .contact-container form {
   display: flex;
@@ -537,13 +546,18 @@ body {
   color: lightgray;
 }
 .contact-container form textarea {
+  display: flex;
+  align-self: flex-start;
+  justify-self: start;
   background-color: #181818;
   color: lightgray;
+  height: 200px;
   width: 100%;
   padding: 0.5rem 1rem;
   font-family: inherit;
   margin-bottom: 2rem;
   border: 1px dashed gray;
+  resize: vertical; /* Prevent horizontal resizing */
 }
 .contact-container form textarea::-moz-placeholder {
   color: lightgray;
@@ -589,11 +603,12 @@ footer {
   footer .content p {
     font-size: 0.9rem;
     margin-bottom: 1rem;
+    color: #b3b3b3;
   }
 }
 footer a {
   text-decoration: none;
-  color: white;
+  color: #b3b3b3;
 }
 footer i {
   font-size: 1.5rem;
