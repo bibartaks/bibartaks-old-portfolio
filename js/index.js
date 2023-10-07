@@ -21,7 +21,7 @@ new fullpage("#fullpage", {
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-  new Splide(".splide", {
+  new Splide("#slider1", {
     type: "loop",
     autoWidth: true,
     autoplay: false,
@@ -34,5 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
       800: { perPage: 1, gap: "1rem" },
       640: { gap: 0 },
     },
+  }).mount()
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+  new Splide(".splide", {
+    type: "loop",
+    interval: 3000,
+    keyboard: "global",
+    autoplay: true,
+    perMove: 1,
   }).mount()
 })
