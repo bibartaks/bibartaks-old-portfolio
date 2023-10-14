@@ -53,17 +53,18 @@ body {
 
 .landing-container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
   grid-gap: 2rem;
   color: white;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .landing-container {
-    grid-template-columns: 1fr;
-    padding: 5rem 2rem;
+    grid-template-columns: auto;
+    padding: 5rem 1rem;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -137,7 +138,7 @@ body {
 @media only screen and (max-width: 1000px) {
   .about-container {
     grid-template-columns: 1fr;
-    padding: 5rem 2rem;
+    padding: 5rem 1rem;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -180,6 +181,19 @@ body {
   width: 390px;
   text-align: center;
 }
+.about-container .img-slider .splide__arrow {
+  background-color: #ffc600 !important;
+}
+.about-container .img-slider .splide__arrow {
+  background-color: #ff8000 !important;
+  opacity: 0.9 !important;
+}
+.about-container .img-slider .splide__arrow:hover {
+  opacity: 0.7 !important;
+}
+.about-container .img-slider .splide__arrow svg {
+  fill: white !important;
+}
 @media only screen and (max-width: 1000px) {
   .about-container .img-slider {
     display: none;
@@ -194,16 +208,28 @@ body {
 @media only screen and (max-width: 500px) {
   .skill-container {
     padding-bottom: 3rem;
+    padding-left: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .skill-container {
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .skill-container {
+    padding-bottom: 3rem;
+    padding-left: 1rem;
   }
 }
 .skill-container .skill-content-container {
   display: grid;
-  grid-template-columns: 600px 1fr;
-  grid-gap: 2rem;
+  grid-template-columns: 500px 1fr;
 }
 @media only screen and (max-width: 800px) {
   .skill-container .skill-content-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 200px;
   }
 }
 .skill-container .skill-title {
@@ -225,7 +251,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-row-gap: 2rem;
   grid-column-gap: 5rem;
-  padding: 1rem;
 }
 @media only screen and (max-width: 1350px) {
   .skill-container .skill-items {
@@ -235,6 +260,7 @@ body {
 @media only screen and (max-width: 1000px) {
   .skill-container .skill-items {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -267,7 +293,8 @@ body {
 }
 
 .tech-cube {
-  display: flex;
+  display: block;
+  margin: auto;
   flex-direction: row;
   justify-content: space-evenly;
   -o-object-fit: scale-down;
@@ -278,6 +305,7 @@ body {
 @media only screen and (max-width: 800px) {
   .tech-cube {
     padding-bottom: 5rem;
+    padding-left: 5rem;
   }
 }
 
@@ -426,26 +454,65 @@ body {
   margin: auto;
   color: white;
 }
+@media only screen and (max-width: 800px) {
+  .project-container {
+    padding-left: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .project-container {
+    padding-left: 1rem;
+  }
+}
 .project-container .project-title {
   font-size: 3rem;
   background-image: linear-gradient(180deg, #ffe993, #eb831c);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  margin-bottom: 3rem;
 }
 @media only screen and (max-width: 600px) {
   .project-container .project-title {
     font-size: 2rem;
-    margin-bottom: 2rem;
+  }
+}
+.project-container .splide__arrow {
+  background-color: #ff8000 !important;
+  opacity: 0.9 !important;
+}
+.project-container .splide__arrow:hover {
+  opacity: 0.7 !important;
+}
+.project-container .splide__arrow--prev {
+  left: -4em !important;
+  margin-left: 0.5rem;
+}
+@media screen and (max-width: 1100px) {
+  .project-container .splide__arrow--prev {
+    left: -3.5em !important;
+    margin-left: 0.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .project-container .splide__arrow--prev {
+    left: auto !important;
   }
 }
 .project-container .splide-1 {
-  max-width: 1200px;
+  max-width: 1300px;
+  padding-right: 5rem;
+}
+@media screen and (max-width: 800px) {
+  .project-container .splide-1 {
+    padding-right: 0;
+  }
+}
+.project-container .splide__arrow svg {
+  fill: white !important;
 }
 .project-container .project-slide {
   margin: 0.3rem;
-  padding: 2rem 1rem;
+  padding: 3rem 0rem;
 }
 .project-container .project-slide .card-content {
   width: 550px;
@@ -454,7 +521,12 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .project-container .project-slide .card-content {
-    width: 300px;
+    width: 410px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .project-container .project-slide .card-content {
+    width: 310px;
   }
 }
 .project-container .project-slide img {
@@ -481,10 +553,10 @@ body {
 }
 
 .contact-container {
+  width: 90%;
   max-width: 1300px;
   margin: auto;
   color: white;
-  padding: 5rem 2rem;
 }
 .contact-container .contact-mail {
   font-size: 0.7rem;
@@ -492,7 +564,7 @@ body {
 }
 @media only screen and (max-width: 800px) {
   .contact-container {
-    padding: 5rem 2rem;
+    padding: 5rem 1rem;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -540,6 +612,10 @@ body {
 .contact-container form input::placeholder {
   color: lightgray;
 }
+.contact-container form input:focus {
+  outline: none; /* Remove default focus outline */
+  border: 1px solid white;
+}
 .contact-container form textarea {
   display: flex;
   align-self: flex-start;
@@ -553,6 +629,10 @@ body {
   margin-bottom: 2rem;
   border: 1px dashed gray;
   resize: vertical; /* Prevent horizontal resizing */
+}
+.contact-container form textarea:focus {
+  outline: none; /* Remove default focus outline */
+  border: 1px solid white;
 }
 .contact-container form textarea::-moz-placeholder {
   color: lightgray;
@@ -589,7 +669,7 @@ footer {
   color: white;
   margin: 0;
   border-top: 1px solid #b3b3b3;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
 }
 @media only screen and (max-width: 700px) {
   footer {
@@ -608,4 +688,8 @@ footer a {
 footer i {
   font-size: 1.5rem;
   margin-right: 1rem;
+  transition: 0.5s scale linear;
+}
+footer i:hover {
+  scale: 1.1;
 }/*# sourceMappingURL=index.css.map */
