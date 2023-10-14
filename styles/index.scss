@@ -303,6 +303,10 @@ body {
         // width: 50px;
         // text-align: center;
         width: 70px;
+
+        @media only screen and (max-width: 800px) {
+          font-size: 0.9rem;
+        }
       }
     }
   }
@@ -566,6 +570,10 @@ body {
       line-height: 150%;
       color: #b3b3b3;
       // max-width: 600px;
+
+      @media only screen and (max-width: 800px) {
+        font-size: 0.9rem;
+      }
     }
 
     a {
@@ -623,6 +631,10 @@ body {
 
     @media only screen and (max-width: 600px) {
       font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+      font-size: 0.9rem;
     }
   }
 

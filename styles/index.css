@@ -296,6 +296,11 @@ body {
 .skill-container .skill-items .skill-item p {
   width: 70px;
 }
+@media only screen and (max-width: 800px) {
+  .skill-container .skill-items .skill-item p {
+    font-size: 0.9rem;
+  }
+}
 
 .tech-cube {
   display: block;
@@ -546,6 +551,11 @@ body {
   line-height: 150%;
   color: #b3b3b3;
 }
+@media only screen and (max-width: 800px) {
+  .project-container .project-slide p {
+    font-size: 0.9rem;
+  }
+}
 .project-container .project-slide a {
   color: white;
   text-decoration: none;
@@ -598,6 +608,11 @@ body {
 @media only screen and (max-width: 600px) {
   .contact-container p {
     font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .contact-container p {
+    font-size: 0.9rem;
   }
 }
 .contact-container form {
