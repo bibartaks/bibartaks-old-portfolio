@@ -43,7 +43,6 @@ body {
 
 #header {
   background: linear-gradient(125.6deg, #121212 63.9%, #df4f1b 30%);
-  min-height: 100vh;
 }
 @media only screen and (max-width: 800px) {
   #header {
